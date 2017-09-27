@@ -16,7 +16,6 @@ import {
   ActivityIndicator
 } from 'react-native'
 
-const { width, height } = Dimensions.get('window')
 
 /**
  * Default styles
@@ -224,6 +223,7 @@ export default class extends Component {
     }
 
     // Default: horizontal
+    const { width, height } = Dimensions.get('window')
     initState.dir = props.horizontal === false ? 'y' : 'x'
     initState.width = props.width || width
     initState.height = props.height || height
